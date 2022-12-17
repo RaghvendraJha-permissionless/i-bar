@@ -1,0 +1,330 @@
+@font-face {
+    font-family: Power_Grotesk;
+    src: url("/fonts/PowerGrotesk-Trial/TRIAL/PowerGroteskTrial-TTF/PowerGroteskTrial-Black.ttf");
+}
+
+@font-face {
+    font-family: Power_Grotesk_lite;
+    src: url("/fonts/PowerGrotesk-Trial/TRIAL/PowerGroteskTrial-TTF/PowerGroteskTrial-Light.ttf");
+}
+:root{
+
+    
+    /* colors */
+
+    --primary-color:#A9FF1C;
+    --bg-prime: black;
+    --text_color: white;
+
+
+    /* fonts */
+
+    --font_lite: Power_Grotesk_lite;
+
+
+    /* images */
+
+    --logo:url(img/logo.svg);
+    --bg_commingSoon_img1: url(img/comming_soon.png);
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px auto;
+    padding: 0px;
+    width: var(--body_width);
+    background: black;
+    text-align: center;
+    font-family: Power_Grotesk;
+    color: var(--text_color);
+}
+
+span{
+    display:inline-block;
+}
+
+.header{
+    width: 100%;
+    height:55px;
+    background: var(--bg-prime);
+    box-sizing: border-box;
+    padding: 15px 120px;
+    position: static;
+    z-index: 10;
+}
+
+.header .icon{
+    float: left;
+}
+
+.header .icon_bar{
+    float: right;
+}
+
+.header .icon_bar svg{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* css code for main screen will start hereafter */
+
+.main-screen{
+    width: 100%;
+    aspect-ratio: 2.16/1;
+    background:black;
+    object-fit: contain;
+    position: relative;
+}
+
+.main-screen img{
+    width: 100%;
+}
+
+.main-screen .ms-text{
+    --ms-text-width:calc(var(--body_width)/3);
+    width: var(--ms-text-width);
+    aspect-ratio: 1.05/1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    right: 15%;
+    word-wrap: break-word;
+    color: black;
+    font-weight: 100;
+    /* background: red; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.main-screen .ms-text h1{
+    font-size: calc(var(--ms-text-width) / 6);
+    font-family: var(--font_lite);
+    margin-bottom: 0px;
+}
+
+.main-screen .ms-text p{
+    font-size: calc(var(--ms-text-width) / 30);
+    font-family: var(--font_lite);
+    letter-spacing: 1px;
+}
+
+
+.main-screen .ms-text button{
+    --button-width: calc(var(--ms-text-width) / 3.4);
+    margin: auto;
+    width:var(--button-width);
+    aspect-ratio: 2.5/1;
+    font-family: Power_Grotesk_thin;
+    font-size: calc(var(--ms-text-width)/28);
+    background-color: var(--primary-color);
+    font-weight: bold;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: none;
+}
+
+.main-screen .ms-text-rotate{
+    position: relative;
+    transform: rotateZ(-90deg) translateY(calc(var(--body_width)*0.45)) translateX(calc(var(--body_width)*0.253));
+    font-family: Mohave, sans-serif;
+    font-weight: bolder;
+    font-size: calc(var(--body_width)*0.049);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: rgba(0,0,0,0);
+    -webkit-text-stroke-color: #a7ff1d;
+
+}
+
+
+
+
+
+
+
+
+/* css for trending seection starts here */
+
+
+.trending{
+    width: 92%;
+    aspect-ratio: 3/1;
+    margin: calc(var(--body_width)/25) auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.trending .trend_heading{
+    width: 100%;
+    aspect-ratio: 14/1;
+    font-size: calc(var(--body_width)/20);
+    font-family: var(--font_lite);
+    font-weight: bold;
+}
+
+.trending .trend_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 3/1;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.trending .trend_img figure{
+    float:left;
+    width: 19%;
+    aspect-ratio: 1/1.5;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.trending .trend_img figure img{
+    width:90%;
+    aspect-ratio: 1/1;
+}
+
+.trending .trend_img figure figcaption{
+    font-family: var(--font_lite);
+    font-size: calc(var(--body_width)*0.01);
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+/* css code for  */
+
+.comming_soon{
+    width: 100%;
+    aspect-ratio: 3/1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.comming_soon .cs_text{
+    width: 50%;
+    aspect-ratio: 3/1;
+    position: absolute;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font_lite);
+}
+
+.comming_soon .cs_text .cs_heading{
+    width: 70%;
+    font-size: calc(var(--body_width)*0.05);
+}
+
+.comming_soon .cs_text .cs_p{
+    width: 65%;
+    text-align: left;
+    font-size: calc(var(--body_width)*0.015)
+}
+
+.comming_soon .cs_text button{
+    border: none;
+    font-size: calc(var(--body_width)*0.01);
+    padding: calc(var(--body_width)*0.008) calc(var(--body_width)*0.018) ;
+    position: relative;
+    left: calc(var(--body_width)*(-0.11));
+    bottom: calc(var(--body_width)*(-0.03));
+    background: var(--primary-color);
+}
+
+.comming_soon .img1{
+    position: absolute;
+    z-index: 2;
+    width: calc(var(--body_width)*0.33);
+    aspect-ratio:1/1;
+    right:calc(var(--body_width)*0.15);
+}
+
+.comming_soon .img2{
+    width: 100%;
+}
+
+.spiral_cont{
+    width: 30%;
+    position: absolute;
+    right: 0;
+}
+
+.spiral_cont .spiral_text1{
+    width: 60%;
+    text-align: left;
+    font-size: calc(var(--body_width)*0.01);
+}
+
+.spiral_cont .spiral{
+    width: 30%;
+    text-align: left;
+    float: left;
+}
+
+.spiral_cont .spiral_text2{
+    width: 65%;
+    font-size: calc(var(--body_width)*0.01);
+    position: relative;
+    top: calc(var(--body_width)*0.05);
+    text-align: left;
+}
+
+
+
+
+
+
+
+/* css for populr in the house start hereafter */
+
+.popular_in_house ._heading{
+    width: 100%;
+    aspect-ratio: 14/1;
+    font-size: calc(var(--body_width)/20);
+    font-family: var(--font_lite);
+    font-weight: bold;
+    margin-top:calc(var(--body_width)*0.05);
+}
+
+.popular_in_house .img_holder{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    aspect-ratio: 3/1;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.popular_in_house .img_holder img{
+    width: calc(var(--body_width)*0.2);
+    aspect-ratio: 1/1;
+}
